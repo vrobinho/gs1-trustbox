@@ -49,6 +49,8 @@ def read_xls(filename):
 def run(n_jobs, random_state, bucket_name, n_cpus): 
     start_time = time.time()
 
+    pandarallel.initialize()
+
     with mlflow.start_run():
         # Read the data data
         # ---------------------------------------------------------------------------------------------------
