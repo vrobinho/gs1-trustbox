@@ -1,0 +1,12 @@
+name: GS1-Trustbox
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      n_jobs: {type: int, default: 2}
+      random_state: {type: int, default: 42}
+      bucket: {type: string, default: None}
+      n_cpus: {type: int, default: 1}
+    command: "python GS1_predMod_v3.py --n-jobs {n_jobs} --random-state {random_state} --bucket-name {bucket} --n-cpus {n_cpus}"
